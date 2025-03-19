@@ -1,0 +1,233 @@
+/* Table Base Styles */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  vertical-align: top;
+  border-color: var(--border-color);
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.75rem;
+  background-color: var(--background-color);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px transparent;
+}
+
+/* Table Head */
+.table > thead {
+  vertical-align: bottom;
+}
+
+.table > thead > tr > th {
+  padding: 0.75rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* Table Body */
+.table > tbody {
+  vertical-align: inherit;
+}
+
+.table > tbody > tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table > tbody > tr:last-child {
+  border-bottom: 0;
+}
+
+/* Table Footer */
+.table > tfoot {
+  vertical-align: bottom;
+}
+
+.table > tfoot > tr > th {
+  padding: 0.75rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 2px solid var(--border-color);
+}
+
+/* Table Caption */
+.table > caption {
+  padding: 0.75rem;
+  color: var(--text-light);
+  text-align: left;
+  caption-side: bottom;
+}
+
+/* Table Variants */
+.table-primary {
+  --bs-table-bg: var(--primary-color);
+  --bs-table-color: white;
+  --bs-table-hover-bg: var(--primary-dark);
+  --bs-table-hover-color: white;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-striped-color: white;
+  --bs-table-active-bg: rgba(255, 255, 255, 0.1);
+  --bs-table-active-color: white;
+  --bs-table-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-secondary {
+  --bs-table-bg: var(--secondary-color);
+  --bs-table-color: white;
+  --bs-table-hover-bg: var(--secondary-dark);
+  --bs-table-hover-color: white;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-striped-color: white;
+  --bs-table-active-bg: rgba(255, 255, 255, 0.1);
+  --bs-table-active-color: white;
+  --bs-table-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-success {
+  --bs-table-bg: var(--success-color);
+  --bs-table-color: white;
+  --bs-table-hover-bg: var(--success-dark);
+  --bs-table-hover-color: white;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-striped-color: white;
+  --bs-table-active-bg: rgba(255, 255, 255, 0.1);
+  --bs-table-active-color: white;
+  --bs-table-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-danger {
+  --bs-table-bg: var(--danger-color);
+  --bs-table-color: white;
+  --bs-table-hover-bg: var(--danger-dark);
+  --bs-table-hover-color: white;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-striped-color: white;
+  --bs-table-active-bg: rgba(255, 255, 255, 0.1);
+  --bs-table-active-color: white;
+  --bs-table-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-warning {
+  --bs-table-bg: var(--warning-color);
+  --bs-table-color: var(--text-color);
+  --bs-table-hover-bg: var(--warning-dark);
+  --bs-table-hover-color: var(--text-color);
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-striped-color: var(--text-color);
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-active-color: var(--text-color);
+  --bs-table-border-color: rgba(0, 0, 0, 0.1);
+}
+
+.table-info {
+  --bs-table-bg: var(--info-color);
+  --bs-table-color: white;
+  --bs-table-hover-bg: var(--info-dark);
+  --bs-table-hover-color: white;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-striped-color: white;
+  --bs-table-active-bg: rgba(255, 255, 255, 0.1);
+  --bs-table-active-color: white;
+  --bs-table-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Table Striped */
+.table-striped > tbody > tr:nth-of-type(odd) {
+  --bs-table-accent-bg: var(--bs-table-striped-bg);
+  color: var(--bs-table-striped-color);
+}
+
+/* Table Hover */
+.table-hover > tbody > tr:hover {
+  --bs-table-accent-bg: var(--bs-table-hover-bg);
+  color: var(--bs-table-hover-color);
+}
+
+/* Table Active */
+.table-active {
+  --bs-table-accent-bg: var(--bs-table-active-bg);
+  color: var(--bs-table-active-color);
+}
+
+/* Table Bordered */
+.table-bordered {
+  border: 1px solid var(--border-color);
+}
+
+.table-bordered > :not(caption) > * {
+  border-width: 0 1px;
+}
+
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 1px;
+  border-bottom-width: 1px;
+}
+
+.table-bordered > :not(:first-child) {
+  border-top: 2px solid var(--border-color);
+}
+
+/* Table Borderless */
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+
+.table-borderless > :not(:first-child) {
+  border-top-width: 0;
+}
+
+/* Table Small */
+.table-sm > :not(caption) > * > * {
+  padding: 0.5rem;
+}
+
+/* Table Responsive */
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive > .table-bordered {
+  border: 0;
+}
+
+/* Table Alignment */
+.table > :not(caption) > * > * {
+  text-align: left;
+}
+
+.table > :not(caption) > * > th {
+  text-align: left;
+}
+
+.table > :not(caption) > * > td {
+  text-align: left;
+}
+
+/* Table Vertical Alignment */
+.table > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+.table > :not(caption) > * > th {
+  vertical-align: bottom;
+}
+
+.table > :not(caption) > * > td {
+  vertical-align: middle;
+}
+
+/* Table Caption Top */
+.table-caption-top > caption {
+  caption-side: top;
+}
+
+/* Table Caption Bottom */
+.table-caption-bottom > caption {
+  caption-side: bottom;
+}

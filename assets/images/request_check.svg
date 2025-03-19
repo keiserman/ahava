@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+	<title>Screenshot 2022-07-09 at 18</title>
+	<defs>
+		<image  width="42" height="45" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAtCAMAAADvGAnRAAAAAXNSR0IB2cksfwAAAQhQTFRF+Pv96fDzydbcucnQtsfOt8jPwtHX3ufr8fb4uMnQj6mzla23pbnBqLvDp7vDm7K7pLrC5+7x8PX4oLa/l6+4yNPY5+rt6ezu1t7hore/la634urutMbNmK+53ePm5ursqbzEmrG78fX45OvvzNfb4ebpxdPZmrG6tMXMorfAsMLKrL/GkKq09/r8rMDIsMLJ9fn7rcDIr8HIy9bbtsjPpLnBwM7Tl6+50t3ikaq04OXopLjAsMPL8/f6mbG6scLJydXZ3ebq1+Hmt8fOk6y2u8vSztrfnLO8v83T0dre1N3g09zgx9PYqLzDucrR9vr8lq64kau1qr7G2ePn9/v97fP26/H06/L084w2tgAAAMBJREFUeJzt1MUSwjAARdFgBYJLCe6uxd3dHf7/T4BdkyZLZpihd30Wb/UAkPtuCqVKTaThtBSo00OD0URktkCrjZR2h5N3IWluj9dHUH8gSIHvQuFIFJMxGKdLhBKGJEa5FEsilM5gNJtjUz5fENNiiU3jUJCpTH+KlitsWsVprc6mjaZYgla7w6TdHkb7gyFLjuAYo2ACp7THeC+dzQHRYrZcrTdE290eHo4kBQr1CUo6X64S+Ol2fxA9BSr8214OUmFB6Pu8QwAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="-5" y="-8"/>
+</svg>

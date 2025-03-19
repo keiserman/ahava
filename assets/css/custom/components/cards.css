@@ -1,0 +1,254 @@
+/* Card Base Styles */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--background-color);
+  background-clip: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Header */
+.card-header {
+  padding: 1rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 8px 8px 0 0;
+}
+
+.card-header:first-child {
+  border-radius: calc(8px - 1px) calc(8px - 1px) 0 0;
+}
+
+/* Card Body */
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+/* Card Footer */
+.card-footer {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid var(--border-color);
+  border-radius: 0 0 8px 8px;
+}
+
+/* Card Image */
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-img-bottom {
+  width: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Card Title */
+.card-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Card Subtitle */
+.card-subtitle {
+  margin-top: -0.375rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* Card Text */
+.card-text {
+  margin-bottom: 1rem;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Card Link */
+.card-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Card Variants */
+.card-primary {
+  border-color: var(--primary-color);
+}
+
+.card-primary .card-header {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.card-secondary {
+  border-color: var(--secondary-color);
+}
+
+.card-secondary .card-header {
+  background-color: var(--secondary-color);
+  color: white;
+  border-color: var(--secondary-color);
+}
+
+.card-success {
+  border-color: var(--success-color);
+}
+
+.card-success .card-header {
+  background-color: var(--success-color);
+  color: white;
+  border-color: var(--success-color);
+}
+
+.card-danger {
+  border-color: var(--danger-color);
+}
+
+.card-danger .card-header {
+  background-color: var(--danger-color);
+  color: white;
+  border-color: var(--danger-color);
+}
+
+.card-warning {
+  border-color: var(--warning-color);
+}
+
+.card-warning .card-header {
+  background-color: var(--warning-color);
+  color: var(--text-color);
+  border-color: var(--warning-color);
+}
+
+.card-info {
+  border-color: var(--info-color);
+}
+
+.card-info .card-header {
+  background-color: var(--info-color);
+  color: white;
+  border-color: var(--info-color);
+}
+
+/* Card Groups */
+.card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 576px) {
+  .card-group {
+    flex-direction: row;
+  }
+}
+
+.card-group > .card {
+  flex: 1 1 0%;
+  margin-bottom: 0;
+}
+
+/* Card Decks */
+.card-deck {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 576px) {
+  .card-deck {
+    flex-direction: row;
+  }
+}
+
+.card-deck .card {
+  flex: 1 1 0%;
+  margin-bottom: 0;
+}
+
+/* Card Columns */
+.card-columns {
+  column-count: 1;
+  column-gap: 1rem;
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+.card-columns .card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Card Overlay */
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  color: white;
+  border-radius: 8px;
+}
+
+.card-img-overlay .card-title,
+.card-img-overlay .card-text {
+  color: white;
+}
+
+/* Card Sizes */
+.card-sm {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.card-md {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card-lg {
+  max-width: 800px;
+  margin: 0 auto;
+}

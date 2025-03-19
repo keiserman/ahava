@@ -1,0 +1,226 @@
+/* Badge Base Styles */
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  background-color: var(--primary-color);
+}
+
+/* Badge Variants */
+.badge-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.badge-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.badge-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.badge-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.badge-warning {
+  background-color: var(--warning-color);
+  color: var(--text-color);
+}
+
+.badge-info {
+  background-color: var(--info-color);
+  color: white;
+}
+
+/* Badge Light Variants */
+.badge-light-primary {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.badge-light-secondary {
+  background-color: var(--secondary-light);
+  color: var(--secondary-dark);
+}
+
+.badge-light-success {
+  background-color: var(--success-light);
+  color: var(--success-dark);
+}
+
+.badge-light-danger {
+  background-color: var(--danger-light);
+  color: var(--danger-dark);
+}
+
+.badge-light-warning {
+  background-color: var(--warning-light);
+  color: var(--warning-dark);
+}
+
+.badge-light-info {
+  background-color: var(--info-light);
+  color: var(--info-dark);
+}
+
+/* Badge Outline Variants */
+.badge-outline-primary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.badge-outline-secondary {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.badge-outline-success {
+  background-color: transparent;
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.badge-outline-danger {
+  background-color: transparent;
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+}
+
+.badge-outline-warning {
+  background-color: transparent;
+  color: var(--warning-color);
+  border: 1px solid var(--warning-color);
+}
+
+.badge-outline-info {
+  background-color: transparent;
+  color: var(--info-color);
+  border: 1px solid var(--info-color);
+}
+
+/* Badge Sizes */
+.badge-sm {
+  padding: 0.25em 0.5em;
+  font-size: 0.65em;
+}
+
+.badge-lg {
+  padding: 0.5em 0.75em;
+  font-size: 0.85em;
+}
+
+/* Badge with Icon */
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.badge-icon i {
+  font-size: 0.9em;
+}
+
+/* Badge with Link */
+.badge-link {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.badge-link:hover {
+  opacity: 0.8;
+}
+
+/* Badge with Dot */
+.badge-dot {
+  position: relative;
+  padding-left: 0.5em;
+}
+
+.badge-dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Badge with Counter */
+.badge-counter {
+  position: relative;
+  padding-right: 0.5em;
+}
+
+.badge-counter::after {
+  content: attr(data-count);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+/* Badge with Status */
+.badge-status {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.badge-status::before {
+  content: "";
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Badge with Animation */
+.badge {
+  animation: badgePopIn 0.3s ease-out;
+}
+
+@keyframes badgePopIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Badge Responsive */
+@media (max-width: 576px) {
+  .badge {
+    padding: 0.25em 0.5em;
+    font-size: 0.7em;
+  }
+
+  .badge-lg {
+    padding: 0.4em 0.6em;
+    font-size: 0.8em;
+  }
+}

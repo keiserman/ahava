@@ -1,0 +1,82 @@
+/* Typography */
+@font-face {
+  font-family: "LTWave-Regular";
+  src: url("../../../fonts/LTWave-Regular.ttf");
+}
+
+@font-face {
+  font-family: "LTWave-LightItalic";
+  src: url("../../../fonts/LTWave-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "LTWave-Light";
+  src: url("../../../fonts/LTWave-Light.ttf");
+}
+
+@font-face {
+  font-family: "LTWave-Italic";
+  src: url("../../../fonts/LTWave-Italic.ttf");
+}
+
+@font-face {
+  font-family: "LTWave-BoldItalic";
+  src: url("../../../fonts/LTWave-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "LTWave-Bold";
+  src: url("../../../fonts/LTWave-Bold.ttf");
+}
+
+/* Base Typography */
+body {
+  font-family: "Avenir", sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "LTWave-Regular", serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}

@@ -1,0 +1,36 @@
+<?php
+/**
+ * Widget functions
+ *
+ * @package Ahava_Medical
+ */
+
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
+
+/**
+ * Register widget areas
+ */
+function ahava_widgets_init() {
+    register_sidebar(array(
+        'name'          => esc_html__('Sidebar', 'ahava-medical'),
+        'id'            => 'sidebar-1',
+        'description'   => esc_html__('Add widgets here.', 'ahava-medical'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+
+    register_sidebar(array(
+        'name'          => esc_html__('Footer Widget Area', 'ahava-medical'),
+        'id'            => 'footer-1',
+        'description'   => esc_html__('Add footer widgets here.', 'ahava-medical'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ));
+}
+add_action('widgets_init', 'ahava_widgets_init'); 

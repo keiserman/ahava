@@ -1,0 +1,233 @@
+/* Navigation Base Styles */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* Navigation Links */
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--primary-color);
+}
+
+.nav-link.disabled {
+  color: var(--text-light);
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Active State */
+.nav-link.active {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  border: 1px solid transparent;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: var(--border-color) var(--border-color) var(--primary-color);
+  isolation: isolate;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  border-color: var(--border-color) var(--border-color) var(--background-color);
+}
+
+/* Navigation Pills */
+.nav-pills .nav-link {
+  border-radius: 4px;
+}
+
+.nav-pills .nav-link.active {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+/* Navigation Underline */
+.nav-underline {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-underline .nav-link {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-underline .nav-link:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+.nav-underline .nav-link.active {
+  border-bottom-color: var(--primary-color);
+}
+
+/* Navigation Fill */
+.nav-fill .nav-item {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.nav-fill .nav-link {
+  width: 100%;
+}
+
+/* Navigation Justified */
+.nav-justified .nav-item {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.nav-justified .nav-link {
+  width: 100%;
+}
+
+/* Responsive Navigation */
+@media (min-width: 576px) {
+  .nav-justified .nav-item {
+    flex: 1 1 0%;
+  }
+}
+
+/* Dropdown Navigation */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .nav-link {
+  padding-right: 1.5rem;
+}
+
+.nav-dropdown .nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown.active .nav-link::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: left;
+  background-color: var(--background-color);
+  background-clip: padding-box;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown.active .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: var(--text-color);
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  transition: background-color 0.3s ease;
+}
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus {
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-dropdown-item.active,
+.nav-dropdown-item:active {
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  display: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+@media (max-width: 991.98px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.show {
+    display: block;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
