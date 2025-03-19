@@ -1,0 +1,35 @@
+<?php
+/**
+ * Title: Service Card
+ * Slug: ahava/service-card
+ * Categories: ahava
+ * Description: A card displaying a medical service with icon, title, and description
+ */
+?>
+<!-- wp:group {"className":"service-card","layout":{"inherit":true}} -->
+<div class="service-card">
+    <!-- wp:image {"className":"service-icon","width":64,"height":64} -->
+    <figure class="wp-block-image service-icon is-resized">
+        <img src="" alt="" width="64" height="64"/>
+    </figure>
+    <!-- /wp:image -->
+    
+    <!-- wp:heading {"level":3,"className":"service-title"} -->
+    <h3 class="service-title">Service Title</h3>
+    <!-- /wp:heading -->
+    
+    <!-- wp:paragraph {"className":"service-description"} -->
+    <p class="service-description">Brief description of the service and its benefits.</p>
+    <!-- /wp:paragraph -->
+    
+    <!-- wp:buttons -->
+    <div class="wp-block-buttons">
+        <!-- wp:button {"className":"service-link","size":"small"} -->
+        <div class="wp-block-button service-link">
+            <a class="wp-block-button__link wp-element-button" href="#">Learn More</a>
+        </div>
+        <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+</div>
+<!-- /wp:group --> 

@@ -1,0 +1,57 @@
+<?php
+/**
+ * Title: Doctor Profile
+ * Slug: ahava/doctor-profile
+ * Categories: ahava
+ * Description: A profile card for displaying doctor information
+ */
+?>
+<!-- wp:group {"className":"doctor-profile","layout":{"inherit":true}} -->
+<div class="doctor-profile">
+    <!-- wp:image {"className":"doctor-image","width":300,"height":400} -->
+    <figure class="wp-block-image doctor-image is-resized">
+        <img src="" alt="" width="300" height="400"/>
+    </figure>
+    <!-- /wp:image -->
+    
+    <!-- wp:group {"className":"doctor-info"} -->
+    <div class="doctor-info">
+        <!-- wp:heading {"level":3,"className":"doctor-name"} -->
+        <h3 class="doctor-name">Dr. First Last</h3>
+        <!-- /wp:heading -->
+        
+        <!-- wp:paragraph {"className":"doctor-specialty"} -->
+        <p class="doctor-specialty">Specialty</p>
+        <!-- /wp:paragraph -->
+        
+        <!-- wp:paragraph {"className":"doctor-description"} -->
+        <p class="doctor-description">Brief biography and expertise description.</p>
+        <!-- /wp:paragraph -->
+        
+        <!-- wp:list {"className":"doctor-credentials"} -->
+        <ul class="doctor-credentials">
+            <!-- wp:list-item -->
+            <li>Board Certification</li>
+            <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>Years of Experience</li>
+            <!-- /wp:list-item -->
+            <!-- wp:list-item -->
+            <li>Special Areas of Interest</li>
+            <!-- /wp:list-item -->
+        </ul>
+        <!-- /wp:list -->
+        
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons">
+            <!-- wp:button {"className":"doctor-schedule","size":"small"} -->
+            <div class="wp-block-button doctor-schedule">
+                <a class="wp-block-button__link wp-element-button" href="#">Schedule Appointment</a>
+            </div>
+            <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
+    </div>
+    <!-- /wp:group -->
+</div>
+<!-- /wp:group --> 

@@ -22,6 +22,7 @@ require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/plugins.php';
 require get_template_directory() . '/inc/acf.php';
 require get_template_directory() . '/inc/utilities.php';
+require get_template_directory() . '/inc/patterns.php';
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
